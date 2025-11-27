@@ -21,8 +21,8 @@ public class OwnerMapper {
         owner.setId(dto.getId());
         owner.setName(dto.getName());
         // OwnerType conversion from String to enum
-        if (dto.getOwnerType() != null) {
-            owner.setOwnerType(OwnerType.valueOf(dto.getOwnerType()));
+        if (dto.getType() != null) {
+            owner.setOwnerType(com.dykyi.toad.automotive.enums.OwnerType.valueOf(dto.getType()));
         }
         return owner;
     }

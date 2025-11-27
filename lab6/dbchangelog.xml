@@ -1,0 +1,152 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="idykyi (generated)" id="1764202076569-1">
+        <createTable tableName="car">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="car_group" type="VARCHAR(255)"/>
+            <column name="car_model" type="VARCHAR(255)"/>
+            <column name="number" type="INT">
+                <constraints unique="true"/>
+            </column>
+            <column name="car_year" type="INT"/>
+            <column name="owner_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-2">
+        <createTable tableName="car_part">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="part_name" type="VARCHAR(255)"/>
+            <column name="car_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-3">
+        <createTable tableName="course">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="credits" type="DOUBLE"/>
+            <column name="course_name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-4">
+        <createTable tableName="curator">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="work_experience" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-5">
+        <createTable tableName="finish_course">
+            <column name="student_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="course_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-6">
+        <createTable tableName="owner">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="address" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="owner_type" type="ENUM('COMPANY', 'INDIVIDUAL')"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-7">
+        <createTable tableName="student">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="city" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="country" type="ENUM('CANADA', 'POLAND', 'UK', 'UKRAINE', 'USA')">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postal_code" type="VARCHAR(255)"/>
+            <column name="street" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birth_date" type="datetime(6)"/>
+            <column name="student_group" type="VARCHAR(255)"/>
+            <column name="student_name" type="VARCHAR(255)"/>
+            <column name="number" type="INT">
+                <constraints unique="true"/>
+            </column>
+            <column name="curator_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-8">
+        <createTable tableName="teacher">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="city" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="country" type="ENUM('CANADA', 'POLAND', 'UK', 'UKRAINE', 'USA')">
+                <constraints nullable="false"/>
+            </column>
+            <column name="postal_code" type="VARCHAR(255)"/>
+            <column name="street" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birth_date" type="datetime(6)"/>
+            <column name="teacher_name" type="VARCHAR(255)"/>
+            <column name="curator_id" type="BIGINT">
+                <constraints unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-9">
+        <createIndex associatedWith="" indexName="FK1p8es2r5j0ceb8gy20f53vwu8" tableName="finish_course">
+            <column name="course_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-10">
+        <createIndex associatedWith="" indexName="FK4ec59hmbtvq3tjp1xcluis1j6" tableName="car">
+            <column name="owner_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-11">
+        <createIndex associatedWith="" indexName="FK556wfw0c4qvfduky9wntb3vwb" tableName="student">
+            <column name="curator_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-12">
+        <createIndex associatedWith="" indexName="FK7ggmt8gce0nmk73v8hsna37kj" tableName="car_part">
+            <column name="car_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-13">
+        <createIndex associatedWith="" indexName="FKlh02y57ci8o04w9gr2byuyk9l" tableName="finish_course">
+            <column name="student_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-14">
+        <addForeignKeyConstraint baseColumnNames="course_id" baseTableName="finish_course" constraintName="FK1p8es2r5j0ceb8gy20f53vwu8" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="course" validate="true"/>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-15">
+        <addForeignKeyConstraint baseColumnNames="owner_id" baseTableName="car" constraintName="FK4ec59hmbtvq3tjp1xcluis1j6" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="owner" validate="true"/>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-16">
+        <addForeignKeyConstraint baseColumnNames="curator_id" baseTableName="student" constraintName="FK556wfw0c4qvfduky9wntb3vwb" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="curator" validate="true"/>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-17">
+        <addForeignKeyConstraint baseColumnNames="car_id" baseTableName="car_part" constraintName="FK7ggmt8gce0nmk73v8hsna37kj" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="car" validate="true"/>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-18">
+        <addForeignKeyConstraint baseColumnNames="curator_id" baseTableName="teacher" constraintName="FKbyu8r94o6o61mno74c7abs3uw" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="curator" validate="true"/>
+    </changeSet>
+    <changeSet author="idykyi (generated)" id="1764202076569-19">
+        <addForeignKeyConstraint baseColumnNames="student_id" baseTableName="finish_course" constraintName="FKlh02y57ci8o04w9gr2byuyk9l" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="student" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
