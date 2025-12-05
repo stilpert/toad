@@ -1,4 +1,4 @@
-package com.toad.dykyi.dto;
+package com.toad.certificateservice.dto;
 
 public record CertificateRequestDTO(
         String studentName,

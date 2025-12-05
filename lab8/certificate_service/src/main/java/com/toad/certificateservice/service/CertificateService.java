@@ -1,11 +1,11 @@
-package com.toad.dykyi.service;
+package com.toad.certificateservice.service;
 
-import com.toad.dykyi.dto.CertificateRequestDTO;
-import com.toad.dykyi.dto.CertificateResponseDTO;
-import com.toad.dykyi.entity.Certificate;
-import com.toad.dykyi.mapper.CertificateMapper;
-import com.toad.dykyi.repository.CertificateRepository;
-import com.toad.dykyi.utils.UniqueCodeGenerator;
+import com.toad.certificateservice.dto.CertificateRequestDTO;
+import com.toad.certificateservice.dto.CertificateResponseDTO;
+import com.toad.certificateservice.entity.Certificate;
+import com.toad.certificateservice.mapper.CertificateMapper;
+import com.toad.certificateservice.repository.CertificateRepository;
+import com.toad.certificateservice.utils.UniqueCodeGenerator;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

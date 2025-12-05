@@ -1,4 +1,4 @@
-package com.toad.dykyi.entity;
+package com.toad.certificateservice.entity;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;

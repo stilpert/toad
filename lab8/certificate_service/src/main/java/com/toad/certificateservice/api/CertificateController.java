@@ -1,8 +1,8 @@
-package com.toad.dykyi.api;
+package com.toad.certificateservice.api;
 
-import com.toad.dykyi.dto.CertificateRequestDTO;
-import com.toad.dykyi.dto.CertificateResponseDTO;
-import com.toad.dykyi.service.CertificateService;
+import com.toad.certificateservice.dto.CertificateRequestDTO;
+import com.toad.certificateservice.dto.CertificateResponseDTO;
+import com.toad.certificateservice.service.CertificateService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

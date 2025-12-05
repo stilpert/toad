@@ -1,4 +1,4 @@
-package com.toad.dykyi.utils;
+package com.toad.certificateservice.utils;
 
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;

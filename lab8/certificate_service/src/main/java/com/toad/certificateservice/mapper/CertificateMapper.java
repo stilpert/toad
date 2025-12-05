@@ -1,8 +1,8 @@
-package com.toad.dykyi.mapper;
+package com.toad.certificateservice.mapper;
 
-import com.toad.dykyi.dto.CertificateRequestDTO;
-import com.toad.dykyi.dto.CertificateResponseDTO;
-import com.toad.dykyi.entity.Certificate;
+import com.toad.certificateservice.dto.CertificateRequestDTO;
+import com.toad.certificateservice.dto.CertificateResponseDTO;
+import com.toad.certificateservice.entity.Certificate;
 import org.springframework.stereotype.Component;
 
 @Component

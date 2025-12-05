@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dykyi.main.iml" filepath="$PROJECT_DIR$/.idea/modules/dykyi.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/certificateservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/certificateservice.main.iml" />
     </modules>
   </component>
 </project>

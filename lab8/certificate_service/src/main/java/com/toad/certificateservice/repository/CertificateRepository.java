@@ -1,6 +1,6 @@
-package com.toad.dykyi.repository;
+package com.toad.certificateservice.repository;
 
-import com.toad.dykyi.entity.Certificate;
+import com.toad.certificateservice.entity.Certificate;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
