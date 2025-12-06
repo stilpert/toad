@@ -1,4 +1,4 @@
-package com.toad.dykyi.config;
+package com.dykyi.toad.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.annotations.security.SecuritySchemes;
 import org.springframework.context.annotation.Configuration;
-
 @Configuration
 @OpenAPIDefinition(info = @Info(title = "REST API", version = "1.0",
         description = "REST API for AcademicService",
